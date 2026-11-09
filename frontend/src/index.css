@@ -1,0 +1,26 @@
+@import "../node_modules/tailwindcss/dist/lib.d.mts";
+
+@theme {
+    --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'Geist Mono Variable', ui-monospace, monospace;
+
+    --color-text-primary: #EDEDED;
+    --color-text-secondary: #A1A1A6;
+    --color-text-muted: #85858B;
+    --color-text-on-inverse: #141415;
+
+    --color-background-primary: #141415;
+    --color-background-secondary: #19191B;
+    --color-background-console: #0F0F10;
+
+    --color-border-primary: #212122;
+
+    --color-green: #39D353;
+
+    --color-root: #E5484D
+
+}
+
+body {
+    font-family: var(--font-sans);
+}
