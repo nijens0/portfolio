@@ -9,6 +9,12 @@
     --color-text-muted: #85858B;
     --color-text-on-inverse: #141415;
 
+    --color-background-primary: #141415;
+    --color-background-secondary: #19191B;
+    --color-background-console: #0F0F10;
+
+    --color-border-primary: #212122;
+
     --color-green: #39D353;
 
     --color-root: #E5484D
