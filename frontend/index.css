@@ -3,6 +3,16 @@
 @theme {
     --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
     --font-mono: 'Geist Mono Variable', ui-monospace, monospace;
+
+    --color-text-primary: #EDEDED;
+    --color-text-secondary: #A1A1A6;
+    --color-text-muted: #85858B;
+    --color-text-on-inverse: #141415;
+
+    --color-green: #39D353;
+
+    --color-root: #E5484D
+
 }
 
 body {
