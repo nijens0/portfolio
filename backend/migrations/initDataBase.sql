@@ -5,6 +5,7 @@ DROP TABLE IF EXISTS project CASCADE;
 DROP TABLE IF EXISTS developers CASCADE;
 DROP TABLE IF EXISTS stack CASCADE;
 DROP TABLE IF EXISTS admin CASCADE;
+DROP TYPE IF EXISTS stack_group, media_type;
 
 CREATE TABLE admin
 (
@@ -16,10 +17,13 @@ CREATE TABLE admin
     CONSTRAINT uq_admin_email UNIQUE (email)
 );
 
+CREATE TYPE stack_group AS ENUM('Frontend', 'Android', 'Backend', 'ML', 'Desktop', 'DevOps', 'Other');
+
 CREATE TABLE stack
 (
     id         SERIAL,
     technology TEXT NOT NULL,
+    group_name stack_group NOT NULL DEFAULT('Other'),
 
     CONSTRAINT pk_stack PRIMARY KEY (id),
     CONSTRAINT uq_stack_technology UNIQUE (technology)
