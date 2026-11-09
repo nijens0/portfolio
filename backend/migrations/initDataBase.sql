@@ -17,10 +17,13 @@ CREATE TABLE admin
     CONSTRAINT uq_admin_email UNIQUE (email)
 );
 
+CREATE TYPE stack_group AS ENUM('Frontend', 'Android', 'Backend', 'ML', 'Desktop', 'DevOps', 'Other');
+
 CREATE TABLE stack
 (
     id         SERIAL,
     technology TEXT NOT NULL,
+    group_name stack_group NOT NULL DEFAULT('Other'),
 
     CONSTRAINT pk_stack PRIMARY KEY (id),
     CONSTRAINT uq_stack_technology UNIQUE (technology)
