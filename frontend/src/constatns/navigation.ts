@@ -1,1 +1,1 @@
-export const navIds: string[] = ['projects', 'activity', 'stack', 'contacts'];
+export type NavId = 'projects' | 'activity' | 'stack' | 'contacts';
