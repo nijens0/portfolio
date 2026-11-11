@@ -1,7 +1,9 @@
 import type {NavId} from '../../../constatns/navigation';
+import {twMerge} from 'tailwind-merge';
 
 interface NavigationProps {
     className?: string
+    vertical?: boolean
 }
 
 interface NavLink {
@@ -9,7 +11,7 @@ interface NavLink {
     id: NavId
 }
 
-export function Navigation({className}: NavigationProps) {
+export function Navigation({className, vertical}: NavigationProps) {
 
     const links: NavLink[] = [
         {label: 'Проекты', id: 'projects'},
@@ -20,7 +22,7 @@ export function Navigation({className}: NavigationProps) {
 
     return(
         <nav className={className}>
-            <ul className='flex text-sm gap-6 leading-none text-text-secondary'>
+            <ul className={twMerge('flex text-sm gap-6 leading-none text-text-secondary', vertical && 'flex-col')}>
                 {Array.from(links).map((link, i) => (
                     <li key={i}>
                         <a href={`#${link.id}`}>
