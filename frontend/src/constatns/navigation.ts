@@ -1,0 +1,1 @@
+export const navIds: string[] = ['projects', 'activity', 'stack', 'contacts'];
