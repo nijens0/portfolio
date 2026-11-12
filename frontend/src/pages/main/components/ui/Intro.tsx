@@ -8,7 +8,7 @@ interface IntroProps {
 export function Intro({className}: IntroProps) {
 
     return (
-        <section className={twMerge('w-132 max-sm:w-full', className)}>
+        <section className={twMerge('w-132 max-sm:w-full shrink-0', className)}>
             <hgroup className='pb-6 max-sm:pb-4'>
                 <h1
                     className={'text-[72px] text-text-primary leading-[74px] tracking-[-0.03em] pb-6 ' +
