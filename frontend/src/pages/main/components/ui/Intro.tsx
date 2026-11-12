@@ -1,5 +1,5 @@
 import {twMerge} from "tailwind-merge";
-import {Button} from "../../../components/ui/Button.tsx";
+import {Button} from "../../../../components/ui/Button.tsx";
 
 interface IntroProps {
     className?: string;

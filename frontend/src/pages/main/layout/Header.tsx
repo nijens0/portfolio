@@ -1,5 +1,5 @@
-import {Navigation} from '../components/Navigation'
-import {BurgerMenu} from "../components/BurgerMenu.tsx";
+import {Navigation} from '../components/ui/Navigation.tsx'
+import {BurgerMenu} from "../components/ui/BurgerMenu.tsx";
 import {useState} from "react";
 
 export function Header() {

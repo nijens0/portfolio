@@ -1,5 +1,5 @@
-import BurgerMenuIcon from '../../../assets/icons/burger-button.svg?react';
-import {Navigation} from './Navigation';
+import BurgerMenuIcon from '../../../../assets/icons/burger-button.svg?react';
+import {Navigation} from './Navigation.tsx';
 import {twMerge} from "tailwind-merge";
 
 interface BurgerMenuProps {
