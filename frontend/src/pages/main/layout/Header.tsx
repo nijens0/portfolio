@@ -10,7 +10,7 @@ export function Header() {
         <header
             className={'sticky flex px-8 w-full min-w-60 xl:gap-188.5 ' +
             'h-16 xl:justify-center justify-between items-center ' +
-            'border-border border-b border-border-primary'}
+            'border-border border-b border-border-primary top-0 bg-background-primary'}
         >
             <a className='text-base text-text-primary leading-none text-nowrap' href="/">Дмитрий Монголин</a>
             <Navigation className='max-md:hidden' />
