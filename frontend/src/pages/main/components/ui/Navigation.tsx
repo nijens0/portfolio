@@ -1,4 +1,4 @@
-import type {NavId} from '../../../constatns/navigation';
+import type {NavId} from '../../../../constatns/navigation.ts';
 import {twMerge} from 'tailwind-merge';
 
 interface NavigationProps {

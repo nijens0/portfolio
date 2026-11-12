@@ -1,5 +1,5 @@
 import {twMerge} from "tailwind-merge";
-import {Button} from "../../../components/ui/Button.tsx";
+import {Button} from "../../../../components/ui/Button.tsx";
 
 interface IntroProps {
     className?: string;
@@ -8,7 +8,7 @@ interface IntroProps {
 export function Intro({className}: IntroProps) {
 
     return (
-        <section className={twMerge('w-132 max-sm:w-89.5', className)}>
+        <section className={twMerge('w-132 max-sm:w-full shrink-0', className)}>
             <hgroup className='pb-6 max-sm:pb-4'>
                 <h1
                     className={'text-[72px] text-text-primary leading-[74px] tracking-[-0.03em] pb-6 ' +
@@ -24,7 +24,7 @@ export function Intro({className}: IntroProps) {
                     бэкенд и десктоп.
                 </p>
             </hgroup>
-            <div className={'flex gap-3 max-sm:flex-col mas-sm:gap-2'}>
+            <div className={'flex gap-3 max-sm:flex-col max-sm:gap-2'}>
                 <Button
                     className={'bg-background-inverse text-[15px] leading-[22px] tracking-normal ' +
                         'text-text-on-inverse px-5 py-2.75 rounded-lg'}
