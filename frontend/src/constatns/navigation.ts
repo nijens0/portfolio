@@ -1,0 +1,1 @@
+export type NavId = 'projects' | 'activity' | 'stack' | 'contacts';
