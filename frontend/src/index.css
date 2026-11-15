@@ -23,6 +23,11 @@
 
     --color-root: #E5484D
 
+    --color-contribution-0: #232325;
+    --color-contribution-1: #0E4429;
+    --color-contribution-2: #006D32;
+    --color-contribution-3: #26A641;
+    --color-contribution-4: #39D353;
 }
 
 @layer base {
