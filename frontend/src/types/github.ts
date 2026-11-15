@@ -1,7 +1,7 @@
 export type ContributionDay = {
     date: string
     contributionCount: number
-    contributionLevel: string
+    contributionLevel: ContributionLevel
 };
 
 export type ContributionCalendar = {
