@@ -7,9 +7,8 @@ export const gitHubApi = {
         api<ContributionCalendar>('git-hub-api/contribution-calendar')
 };
 
-export const contributionCalendarQuery = () => {
+export const contributionCalendarQuery = () =>
     queryOptions({
         queryKey: ['github', 'contribution-calendar'],
         queryFn: gitHubApi.getContributionCalendar
-    })
-};
+    });
