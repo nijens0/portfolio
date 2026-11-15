@@ -11,6 +11,8 @@ async function bootstrap() {
         defaultVersion: '1'
     });
 
-    await app.listen(process.env.PORT ?? 3000);
+    const port = process.env.PORT ?? 3000;
+    await app.listen(port);
+    console.log(`Backend: http://localhost:${port}/api/v1`);
 }
 bootstrap();

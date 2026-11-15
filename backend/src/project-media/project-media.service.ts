@@ -1,5 +1,5 @@
 import {Injectable, NotFoundException} from '@nestjs/common';
-import {PrismaService} from "../prisma/prisma.service";
+import PrismaService from "../prisma/prisma.service";
 import {CreateProjectMediaDto} from "./dto/create-project-media.dto";
 import {ReadProjectMediaDto} from "./dto/read-project-media.dto";
 import {UpdateProjectMediaDto} from "./dto/update-project-media.dto";

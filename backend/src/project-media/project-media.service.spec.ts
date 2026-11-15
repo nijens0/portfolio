@@ -3,7 +3,7 @@ import {project_mediaModel} from "../generated/prisma/models/project_media";
 import {projectModel} from "../generated/prisma/models/project";
 import {media_type} from "../generated/prisma/enums";
 import {Test} from "@nestjs/testing";
-import {PrismaService} from "../prisma/prisma.service";
+import PrismaService from "../prisma/prisma.service";
 import {CreateProjectMediaDto} from "./dto/create-project-media.dto";
 import {NotFoundException} from "@nestjs/common";
 import {UpdateProjectMediaDto} from "./dto/update-project-media.dto";

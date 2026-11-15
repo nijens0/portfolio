@@ -1,5 +1,5 @@
 import {ConflictException, Injectable, NotFoundException} from '@nestjs/common';
-import {PrismaService} from "../prisma/prisma.service";
+import PrismaService from "../prisma/prisma.service";
 import {CreateStackDto} from "./dto/create-stack.dto";
 import {plainToInstance} from "class-transformer";
 import {ReadStackDto} from "./dto/read-stack.dto";
