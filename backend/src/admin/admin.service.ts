@@ -4,7 +4,7 @@ import {CreateAdminDto} from './dto/create-admin.dto';
 import {UpdateAdminDto} from './dto/update-admin.dto';
 import {ChangeAdminPasswordDto} from "./dto/change-admin-password.dto";
 import {ReadAdminDto} from './dto/read-admin.dto';
-import {PrismaService} from "../prisma/prisma.service";
+import PrismaService from "../prisma/prisma.service";
 import {plainToInstance} from 'class-transformer';
 
 @Injectable()

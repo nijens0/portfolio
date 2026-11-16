@@ -1,7 +1,7 @@
 import {DeveloperService} from "./developer.service";
 import {developersModel} from "../generated/prisma/models/developers";
 import {Test} from "@nestjs/testing";
-import {PrismaService} from "../prisma/prisma.service";
+import PrismaService from "../prisma/prisma.service";
 import {CreateDeveloperDto} from "./dto/create-developer.dto";
 import {ConflictException, NotFoundException} from "@nestjs/common";
 import {UpdateDeveloperDto} from "./dto/update-developer.dto";

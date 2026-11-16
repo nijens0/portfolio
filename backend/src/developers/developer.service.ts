@@ -1,5 +1,5 @@
 import {ConflictException, Injectable, NotFoundException} from '@nestjs/common';
-import {PrismaService} from "../prisma/prisma.service";
+import PrismaService from "../prisma/prisma.service";
 import {CreateDeveloperDto} from "./dto/create-developer.dto";
 import {plainToInstance} from "class-transformer";
 import {ReadDeveloperDto} from "./dto/read-developer.dto";

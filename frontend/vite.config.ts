@@ -6,5 +6,14 @@ import svgr from 'vite-plugin-svgr'
 // https://vite.dev/config/
 export default defineConfig({
     root: 'src',
+    envDir: '..',
     plugins: [react(), tailwindcss(), svgr()],
+    server: {
+        proxy: {
+            '/api/v1': {
+                target: 'http://localhost:3000',
+                changeOrigin: true,
+            },
+        },
+    },
 })

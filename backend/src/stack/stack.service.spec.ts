@@ -1,7 +1,7 @@
 import {StackService} from "./stack.service";
 import {stackModel} from "../generated/prisma/models/stack";
 import {Test} from "@nestjs/testing";
-import {PrismaService} from "../prisma/prisma.service";
+import PrismaService from "../prisma/prisma.service";
 import {CreateStackDto} from "./dto/create-stack.dto";
 import {ConflictException, NotFoundException} from "@nestjs/common";
 import {UpdateStackDto} from "./dto/update-stack";

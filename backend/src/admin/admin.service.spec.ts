@@ -2,7 +2,7 @@ import {AdminService} from "./admin.service";
 import {adminModel} from '../generated/prisma/models';
 import {CreateAdminDto} from "./dto/create-admin.dto";
 import {Test, TestingModule} from "@nestjs/testing";
-import {PrismaService} from "../prisma/prisma.service";
+import PrismaService from "../prisma/prisma.service";
 import {ConflictException, NotFoundException, UnauthorizedException} from "@nestjs/common";
 import * as argon2 from 'argon2';
 import {UpdateAdminDto} from "./dto/update-admin.dto";
