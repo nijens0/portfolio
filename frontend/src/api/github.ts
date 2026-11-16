@@ -1,10 +1,10 @@
 import {queryOptions} from '@tanstack/react-query'
 import {api} from './client'
-import type {ContributionCalendar} from "../types/github.ts";
+import type {ContributionCalendarResponse} from "../types/github.ts";
 
 export const gitHubApi = {
     getContributionCalendar: () =>
-        api<ContributionCalendar>('git-hub-api/contribution-calendar')
+        api<ContributionCalendarResponse>('git-hub-api/contribution-calendar')
 };
 
 export const contributionCalendarQuery = () =>
