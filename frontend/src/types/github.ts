@@ -4,13 +4,13 @@ export type ContributionDay = {
     contributionLevel: ContributionLevel
 }
 
-export type ContributionWeek = {
+export type ContributionDays = {
     contributionDays: ContributionDay[]
 }
 
 export type ContributionCalendar = {
     totalContributions: number
-    weeks: ContributionWeek[]
+    weeks: ContributionDays[]
 };
 
 export type ContributionLevel = 'NONE' | 'FIRST_QUARTILE' | 'SECOND_QUARTILE' | 'THIRD_QUARTILE' | 'FOURTH_QUARTILE';
