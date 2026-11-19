@@ -3,6 +3,7 @@ import {ContributionHistory} from "./ContributionHistory.tsx";
 import {ContributionCalendarHeader} from "./ContributionCalendar/ContributionCalendarHeader.tsx";
 import {useQuery} from "@tanstack/react-query";
 import {contributionCalendarQuery} from "../../api/github.ts";
+import {ContributionCalendarFooter} from "./ContributionCalendar/ContributionCalendarFooter.tsx";
 
 export function GithubCard() {
 
@@ -17,6 +18,7 @@ export function GithubCard() {
             <div className={'flex flex-col gap-5'}>
                 <ContributionCalendarHeader {...query} />
                 <ContributionCalendar {...query}/>
+                <ContributionCalendarFooter />
             </div>
 
             <ContributionHistory />
