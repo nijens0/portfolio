@@ -56,7 +56,7 @@ export class GitHubApiService {
                             nameWithOwner
                         }
                     }
-                    repositoryContributions {
+                    repositoryContributions(first: 10) {
                         totalCount
                         nodes {
                             repository {
