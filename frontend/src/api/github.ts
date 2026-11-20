@@ -8,8 +8,8 @@ export const gitHubContributionCalendar = {
 };
 
 export const gitHubContributionHistory = {
-    getContributionHistory: () =>
-        api<ContributionHistoryResponse>('git-hub-api/contribution-history')
+    getContributionHistory: (from: string, to: string) =>
+        api<ContributionHistoryResponse>(`git-hub-api/contribution-history?from=${from}&to=${to}`)
 }
 
 export const contributionCalendarQuery = () =>
@@ -18,8 +18,8 @@ export const contributionCalendarQuery = () =>
         queryFn: gitHubContributionCalendar.getContributionCalendar
     });
 
-export const contributionHistoryQuery = () =>
+export const contributionHistoryQuery = (from: string, to: string) =>
     queryOptions({
-        queryKey: ['github', 'contribution-history'],
-        queryFn: gitHubContributionHistory.getContributionHistory
+        queryKey: ['github', 'contribution-history', from, to],
+        queryFn: () => gitHubContributionHistory.getContributionHistory(from, to)
     })
