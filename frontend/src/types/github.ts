@@ -4,6 +4,38 @@ export type ContributionDay = {
     contributionLevel: ContributionLevel
 }
 
+export type Contributions = {
+    totalCount: number
+}
+
+export type PrimaryLanguage = {
+    name: string
+}
+
+export type Repository = {
+    nameWithOwner: string
+    primaryLanguage: PrimaryLanguage
+}
+
+export type Nodes = {
+    repository: Repository
+}
+
+export type CommitContributionByRepository = {
+    contributions: Contributions
+    repository: Repository
+}
+
+export type PullRequestContributionsByRepository = {
+    contribution: Contributions
+    repository: Repository
+}
+
+export type RepositoryContributions = {
+    totalCount: number
+    nodes: Nodes
+}
+
 export type ContributionDays = {
     contributionDays: ContributionDay[]
 }
@@ -13,16 +45,32 @@ export type ContributionCalendar = {
     weeks: ContributionDays[]
 }
 
-export type ContributionsCollection = {
+export type ContributionsCalendarCollection = {
     contributionCalendar: ContributionCalendar
 }
 
-export type User = {
-    contributionsCollection: ContributionsCollection
+export type ContributionsHistoryCollection = {
+    commitContributionsByRepository: CommitContributionByRepository
+    totalCommitContributions: number
+    totalRepositoriesWithContributedCommits: number
+    pullRequestContributionsByRepository: PullRequestContributionsByRepository
+    repositoryContributions: RepositoryContributions
+}
+
+export type UserCalendar = {
+    contributionsCollection: ContributionsCalendarCollection
+}
+
+export type UserHistory = {
+    contributionsCollection: ContributionsHistoryCollection
 }
 
 export type ContributionCalendarResponse = {
-    user: User
+    user: UserCalendar
+}
+
+export type ContributionHistoryResponse = {
+    user: UserHistory
 }
 
 export type ContributionLevel = 'NONE' | 'FIRST_QUARTILE' | 'SECOND_QUARTILE' | 'THIRD_QUARTILE' | 'FOURTH_QUARTILE';
