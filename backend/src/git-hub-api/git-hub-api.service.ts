@@ -32,8 +32,8 @@ export class GitHubApiService {
 
     getContributionHistory(dto: ContributionHistoryQueryDto) {
 
-        const from = dto.from;
-        const to = dto.to;
+        const from = new Date(dto.from).toISOString();
+        const to = new Date(dto.to).toISOString();
 
         const CONTRIBUTION_HISTORY_QUERY = `query ($from: DateTime, $to: DateTime) {
             user(login: "nijens0") {
@@ -56,7 +56,7 @@ export class GitHubApiService {
                             nameWithOwner
                         }
                     }
-                    repositoryContributions {
+                    repositoryContributions(first: 10) {
                         totalCount
                         nodes {
                             repository {

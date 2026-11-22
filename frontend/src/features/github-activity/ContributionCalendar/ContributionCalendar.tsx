@@ -58,8 +58,6 @@ export function ContributionCalendar(
         )
     }
 
-    {console.log(data)}
-
     return (
         <div className={'flex gap-0.75'}>
             {Array.from({length: data.weeks.length}, (_, i) => (

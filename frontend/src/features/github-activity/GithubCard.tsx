@@ -1,5 +1,5 @@
 import {ContributionCalendar} from "./ContributionCalendar/ContributionCalendar.tsx";
-import {ContributionHistory} from "./ContributionHistory.tsx";
+import {ContributionHistory} from "./ContributionHistory/ContributionHistory.tsx";
 import {ContributionCalendarHeader} from "./ContributionCalendar/ContributionCalendarHeader.tsx";
 import {useQuery} from "@tanstack/react-query";
 import {contributionCalendarQuery} from "../../api/github.ts";
@@ -14,13 +14,12 @@ export function GithubCard() {
 
     return (
         <section className={'flex w-304 h-106.75 p-6 bg-background-secondary border ' +
-            'border-border border-border-hairline rounded-2xl'}>
+            'border-border border-border-hairline rounded-2xl gap-10'}>
             <div className={'flex flex-col gap-5'}>
                 <ContributionCalendarHeader {...query} />
                 <ContributionCalendar {...query}/>
-                <ContributionCalendarFooter />
+                <ContributionCalendarFooter isError={query.isError} />
             </div>
-
             <ContributionHistory />
         </section>
     )

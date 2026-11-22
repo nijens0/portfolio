@@ -14,7 +14,7 @@ export class GitHubApiController {
     }
 
     @Get('contribution-history')
-    getContributionHistory(@Query('from') dto: ContributionHistoryQueryDto) {
+    getContributionHistory(@Query() dto: ContributionHistoryQueryDto) {
         return this.gitHubApiService.getContributionHistory(dto);
     }
 }
