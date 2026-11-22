@@ -1,6 +1,10 @@
 import {Day} from "./Day.tsx";
 
-export function ContributionCalendarFooter() {
+interface ContributionCalendarFooterProps {
+    isError?: boolean;
+}
+
+export function ContributionCalendarFooter({isError}: ContributionCalendarFooterProps) {
 
     const colors: string[] = [
         'bg-contribution-0',
@@ -10,8 +14,7 @@ export function ContributionCalendarFooter() {
         'bg-contribution-4'
     ];
 
-    return (
-        <footer
+    return !isError && (<footer
             className={'flex items-center justify-between w-full text-xs tracking-normal font-mono text-text-muted'}
         >
             <a
