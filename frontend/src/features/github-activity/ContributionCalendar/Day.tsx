@@ -1,4 +1,4 @@
-import type {ContributionDay, ContributionLevel} from "../../../types/github.ts";
+import type {ContributionDay, ContributionLevel} from "../../../types/github.tsx";
 import {twMerge} from "tailwind-merge";
 
 interface DayProps {

@@ -1,5 +1,5 @@
 import {Day} from "./Day.tsx";
-import type {ContributionDay} from "../../../types/github.ts";
+import type {ContributionDay} from "../../../types/github.tsx";
 import {twMerge} from "tailwind-merge";
 
 interface WeekProps {

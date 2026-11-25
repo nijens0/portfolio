@@ -1,4 +1,4 @@
-import type {ContributionCalendar} from "../../../types/github.ts";
+import type {ContributionCalendar} from "../../../types/github.tsx";
 import type {UseQueryResult} from "@tanstack/react-query";
 import {plural} from "../../../types/utility/plural.ts";
 
