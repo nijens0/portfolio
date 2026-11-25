@@ -13,9 +13,9 @@ export function GithubCard() {
     });
 
     return (
-        <section className={'flex w-304 h-106.75 p-6 bg-background-secondary border ' +
+        <section className={'flex w-full h-106.75 p-6 bg-background-secondary border ' +
             'border-border border-border-hairline rounded-2xl gap-10'}>
-            <div className={'flex flex-col gap-5'}>
+            <div className={'flex flex-col gap-5 w-full grow'}>
                 <ContributionCalendarHeader {...query} />
                 <ContributionCalendar {...query}/>
                 <ContributionCalendarFooter isError={query.isError} />
