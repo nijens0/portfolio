@@ -54,7 +54,7 @@ export type ContributionsCalendarCollection = {
 }
 
 export type ContributionsHistoryCollection = {
-    commitContributionsByRepository: CommitContributionByRepository
+    commitContributionsByRepository: CommitContributionByRepository[]
     totalCommitContributions: number
     totalRepositoriesWithContributedCommits: number
     pullRequestContributionsByRepository: PullRequestContributionsByRepository
