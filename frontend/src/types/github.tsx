@@ -1,3 +1,7 @@
+import CommitIcon from "../assets/icons/commit.svg?react";
+import PullRequestIcon from "../assets/icons/pull-request.svg?react";
+import RepoIcon from "../assets/icons/repo.svg?react";
+
 export type ContributionDay = {
     date: string
     contributionCount: number
@@ -50,7 +54,7 @@ export type ContributionsCalendarCollection = {
 }
 
 export type ContributionsHistoryCollection = {
-    commitContributionsByRepository: CommitContributionByRepository
+    commitContributionsByRepository: CommitContributionByRepository[]
     totalCommitContributions: number
     totalRepositoriesWithContributedCommits: number
     pullRequestContributionsByRepository: PullRequestContributionsByRepository
@@ -74,3 +78,5 @@ export type ContributionHistoryResponse = {
 }
 
 export type ContributionLevel = 'NONE' | 'FIRST_QUARTILE' | 'SECOND_QUARTILE' | 'THIRD_QUARTILE' | 'FOURTH_QUARTILE';
+
+export const contributionHistorySvgs = [<CommitIcon/>, <PullRequestIcon/>, <RepoIcon/>];

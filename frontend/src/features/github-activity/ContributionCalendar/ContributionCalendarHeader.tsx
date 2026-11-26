@@ -1,19 +1,19 @@
-import type {ContributionCalendar} from "../../../types/github.ts";
+import type {ContributionCalendar} from "../../../types/github.tsx";
 import type {UseQueryResult} from "@tanstack/react-query";
 import {plural} from "../../../types/utility/plural.ts";
 
 
+const contributionForms = {
+    one: 'вклад',
+    few: 'вклада',
+    many: 'вкладов',
+    other: 'вклада',
+    zero: 'вклад', two: 'вклада'
+};
+
 export function ContributionCalendarHeader(
     {data, isPending, isError}: UseQueryResult<Pick<ContributionCalendar, 'totalContributions'>, Error>
 ) {
-
-    const contributionForms = {
-        one: 'вклад',
-        few: 'вклада',
-        many: 'вкладов',
-        other: 'вклада',
-        zero: 'вклад', two: 'вклада'
-    };
 
     if (isPending) {
 

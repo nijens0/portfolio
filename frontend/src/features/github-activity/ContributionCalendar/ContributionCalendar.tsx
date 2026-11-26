@@ -1,5 +1,5 @@
 import type {UseQueryResult} from "@tanstack/react-query";
-import type {ContributionCalendar} from "../../../types/github.ts";
+import type {ContributionCalendar} from "../../../types/github.tsx";
 import {Week} from "./Week.tsx";
 import {Button} from "../../../components/ui/Button.tsx";
 
